@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Val | Portfolio</title>
+    <title>Valentin Husak | Portfolio</title>
     <meta
       name="description"
-      content="Projects by Val, a cybersecurity student interested in low-level programming, emulation, and systems development."
+      content="Valentin Husak, second-year cybersecurity student focused on low-level programming, emulation, and systems development."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -29,7 +29,9 @@
 
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
+        <a href="#stack">Stack</a>
         <a href="#projects">Projects</a>
+        <a href="#notes">Notes</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -37,26 +39,33 @@
     <main>
       <section class="hero section" id="home">
         <div class="hero-content reveal">
-          <p class="eyebrow">Val · GitHub projects</p>
-          <h1 data-field="greeting">Building systems from the inside out.</h1>
+          <p class="eyebrow">portfolio</p>
+          <h1 data-field="greeting">Valentin Husak</h1>
           <p class="tagline" data-field="tagline">
-            Cybersecurity student focused on low-level programming, emulation, and systems development.
+            Second-year cybersecurity student into low-level programming, emulation, and systems development.
           </p>
 
           <div class="quick-facts" aria-label="Personal information">
             <span>
-              <strong>Studying</strong>
-              <span data-field="occupation">2nd-year cybersecurity</span>
+              <strong>Age</strong>
+              <span data-field="age">18</span>
             </span>
-            <span><strong>Focus</strong><span>Emulation · systems</span></span>
+            <span>
+              <strong>Occupation</strong>
+              <span data-field="occupation">Cybersecurity Student</span>
+            </span>
+            <span>
+              <strong>Based in</strong>
+              <span data-field="location">Paris, France</span>
+            </span>
           </div>
 
           <p class="intro" data-field="intro">
-            I build software that explores how systems work, from a Nintendo Wii U emulator to Windows file compression tools and relational database design.
+            I build software around emulation, Windows utilities, and database design.
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#projects">Explore projects</a>
+            <a class="button primary" href="#projects">Featured Projects</a>
             <a class="button secondary" href="#contact">Contact</a>
           </div>
         </div>
@@ -69,26 +78,42 @@
         </div>
         <div class="about-grid">
           <p class="about-copy reveal" data-field="about">
-            I’m a second-year cybersecurity student interested in low-level programming, emulation, and systems development. My public work includes a C++23 Wii U emulator, a Windows utility for NTFS LZX compression, and a PostgreSQL online-store database.
+            I am a second-year cybersecurity student interested in low-level programming, emulation, and systems development. My projects include a Wii U emulator, a Windows NTFS compression utility, and a PostgreSQL store database.
           </p>
           <div class="skill-strip reveal" id="skill-list" aria-label="Current skills"></div>
         </div>
       </section>
 
+      <section class="section" id="stack">
+        <div class="section-heading reveal">
+          <p class="eyebrow">technical stack</p>
+          <h2>Tools used across my projects.</h2>
+        </div>
+        <div class="card-grid" id="stack-list"></div>
+      </section>
+
       <section class="section" id="projects">
         <div class="section-heading reveal">
-          <p class="eyebrow">public repositories</p>
-          <h2>Projects from GitHub.</h2>
+          <p class="eyebrow">featured projects</p>
+          <h2>Projects from my GitHub.</h2>
         </div>
         <div class="card-grid" id="project-list"></div>
+      </section>
+
+      <section class="section" id="notes">
+        <div class="section-heading reveal">
+          <p class="eyebrow">project notes</p>
+          <h2>Read more in the repositories.</h2>
+        </div>
+        <div class="note-list" id="note-list"></div>
       </section>
 
       <section class="section contact-section" id="contact">
         <div class="contact-panel reveal">
           <div>
             <p class="eyebrow">contact</p>
-            <h2>Find me on GitHub.</h2>
-            <p>Follow my work and see the source for each project.</p>
+            <h2>Get in touch.</h2>
+            <p>See my code and current work on GitHub.</p>
           </div>
           <div class="contact-links" id="contact-list"></div>
         </div>
