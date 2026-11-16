@@ -2,7 +2,6 @@ const portfolioData = {
   name: "Valentin Husak",
   initials: "VH",
   greeting: "Valentin Husak",
-  tagline: "Currently building projects in C++23, Windows development, and PostgreSQL.",
   age: "18",
   occupation: "Second-year Cybersecurity Student",
   location: "Paris, France",
