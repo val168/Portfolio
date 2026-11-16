@@ -2,12 +2,12 @@ const portfolioData = {
   name: "Valentin Husak",
   initials: "VH",
   greeting: "Valentin Husak",
-  tagline: "Second-year cybersecurity student into low-level programming, emulation, and systems development.",
+  tagline: "Currently building projects in C++23, Windows development, and PostgreSQL.",
   age: "18",
   occupation: "Second-year Cybersecurity Student",
   location: "Paris, France",
   intro:
-    "I build software around emulation, Windows utilities, and database design.",
+    "I am a second-year cybersecurity student interested in low-level programming, emulation, and systems development.",
   about:
     "I am a second-year cybersecurity student interested in low-level programming, emulation, and systems development. My projects include a Wii U emulator, a Windows NTFS compression utility, and a PostgreSQL store database.",
   skills: [
