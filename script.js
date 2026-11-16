@@ -1,129 +1,59 @@
-// Customize your portfolio here. Replace placeholder text, links, and cards as you grow.
 const portfolioData = {
-  // Update these basic details first.
-  name: "HUSAK VALENTIN",
-  initials: "HV",
-  greeting: "hi valentin here.",
-  tagline: "Cybersecurity student building low-level tools and desktop apps.",
-  age: "18",
-  occupation: "Undergraduate Cybersecurity Student",
-  location: "Paris, France",
+  name: "Val",
+  initials: "V",
+  greeting: "Building systems from the inside out.",
+  tagline: "Cybersecurity student focused on low-level programming, emulation, and systems development.",
+  occupation: "2nd-year cybersecurity",
   intro:
-    "I study cybersecurity and build small tools in C, C++, Python, and PyQt. My main interests are Windows internals, Linux, automation, and practical desktop software.",
+    "I build software that explores how systems work, from a Nintendo Wii U emulator to Windows file compression tools and relational database design.",
   about:
-    "I focus on practical projects that help me understand operating systems, tooling, and software design. I try to keep my projects scoped, readable, and useful.",
+    "I am a second-year cybersecurity student interested in low-level programming, emulation, and systems development. My public work includes a C++23 Wii U emulator, a Windows utility for NTFS LZX compression, and a PostgreSQL online-store database.",
   skills: [
-    "C",
-    "C++",
-    "Python",
-    "Windows/Linux internals",
-    "CachyOS / Arch",
-    "OpenCV",
-    "ONNX",
-    "Raspberry Pi",
-    "Qt / PyQt",
-    "Stripe",
-    "APIs",
+    "C++23",
+    "Emulation",
+    "PowerPC",
+    "Windows",
+    "NTFS / LZX",
+    "Qt",
+    "SDL3",
+    "Dear ImGui",
+    "PostgreSQL",
   ],
-  // Add, remove, or reorder technical stack cards here.
-  stack: [
-    {
-      role: "Languages",
-      company: "C, C++, and Python",
-      date: "Core",
-      description:
-        "I use C and C++ for lower-level utilities, and Python for scripts, prototypes, and tooling.",
-      skills: ["C", "C++", "Python"],
-    },
-    {
-      role: "Operating Systems",
-      company: "Windows and Linux",
-      date: "Focus",
-      description:
-        "I am learning how Windows and Linux handle processes, files, drivers, and networking. I also use Arch-based Linux setups for my own workflow.",
-      skills: ["Windows", "Linux", "Drivers", "CachyOS", "Arch"],
-    },
-    {
-      role: "Automation",
-      company: "Computer vision and local AI",
-      date: "Applied",
-      description:
-        "I use OpenCV and ONNX for local detection, small analysis pipelines, and automation experiments.",
-      skills: ["OpenCV", "ONNX", "Input Emulation", "Optimization"],
-    },
-    {
-      role: "Hardware / Firmware",
-      company: "Microcontroller integration",
-      date: "Hands-on",
-      description:
-        "I use hardware projects mainly to learn electronics, serial communication, and basic debugging.",
-      skills: ["Raspberry Pi", "Firmware", "Networking", "Peripherals"],
-    },
-    {
-      role: "Application Development",
-      company: "Desktop tools and small products",
-      date: "Product",
-      description:
-        "I build small desktop tools with PyQt and pay attention to packaging, layout, and usability.",
-      skills: ["PyQt", "Qt", "Executables", "Stripe"],
-    },
-  ],
-  // Replace placeholder links when public repositories or demos are ready.
   projects: [
     {
-      name: "ProcLens",
+      name: "Affogato",
       description:
-        "A Windows process inspection tool that shows live process data, loaded modules, memory regions, and handles using Win32 and NT APIs. The goal is to make low-level process information easier to inspect from a small user-mode tool.",
-      technologies: ["C++", "Windows Internals", "Win32 API", "Memory Mapping"],
-      link: "https://github.com/val168/ProcLens",
+        "An experimental Nintendo Wii U emulator in modern C++23. It includes an early PowerPC interpreter, RPX/RPL loading, a small Cafe OS HLE layer, and a minimal desktop frontend.",
+      technologies: ["C++23", "Wii U emulation", "PowerPC", "SDL3", "Dear ImGui"],
+      link: "https://github.com/val168/Affogato",
       linkLabel: "View repository",
     },
     {
-      name: "TraceForge",
+      name: "Compresso",
       description:
-        "A planned desktop app for collecting and viewing activity traces from Windows and Linux. It would combine a Python parser, a PyQt timeline view, and small C/C++ helpers for process, file, and network events.",
-      technologies: ["Python", "C++", "PyQt", "Windows Internals", "Linux"],
-      link: "https://github.com/val168/traceforge",
+        "A Windows desktop utility that analyzes game folders and applies Windows native transparent NTFS LZX compression to eligible files in place.",
+      technologies: ["C++23", "Windows", "NTFS", "LZX", "Qt"],
+      link: "https://github.com/val168/Compresso",
+      linkLabel: "View repository",
+    },
+    {
+      name: "Online Store Database",
+      description:
+        "A PostgreSQL schema for an online store, with customers, products, categories, orders, payments, and shipments, plus sample data and example queries.",
+      technologies: ["PostgreSQL", "SQL", "Relational databases"],
+      link: "https://github.com/val168/DB-Project",
       linkLabel: "View repository",
     },
   ],
-  notes: [
-    {
-      title: "Windows-to-Linux migration",
-      description:
-        "Notes from moving more of my daily workflow to Arch-based Linux.",
-      meta: "linux / privacy",
-      href: "articles/windows-to-linux-migration.html",
-    },
-    {
-      title: "Local AI for automation",
-      description:
-        "Small OpenCV and ONNX experiments that run locally instead of using an online API.",
-      meta: "automation / ai inference",
-      href: "articles/local-ai-for-automation.html",
-    },
-    {
-      title: "Small software products",
-      description:
-        "Planning small utility products with a clear use case, simple pricing, and low maintenance.",
-      meta: "saas / product",
-      href: "articles/small-software-products.html",
-    },
-  ],
-  // Replace these with your real contact links.
   contact: [
-    { label: "Email", value: "husak.valentin@gmail.com", href: "mailto:husak.valentin@gmail.com" },
     { label: "GitHub", value: "github.com/val168", href: "https://github.com/val168" },
-    { label: "LinkedIn", value: "linkedin.com/in/valentinhusak", href: "https://www.linkedin.com/in/valentin-husak-4112b139a/" },
   ],
 };
 
 const fields = document.querySelectorAll("[data-field]");
-const stackList = document.querySelector("#stack-list");
 const projectList = document.querySelector("#project-list");
 const contactList = document.querySelector("#contact-list");
 const skillList = document.querySelector("#skill-list");
-const noteList = document.querySelector("#note-list");
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".site-nav");
 const year = document.querySelector("#current-year");
@@ -153,24 +83,6 @@ skillList.innerHTML = portfolioData.skills
   .map((skill) => `<span class="skill-pill"><strong>${skill}</strong></span>`)
   .join("");
 
-stackList.innerHTML = portfolioData.stack
-  .map(
-    (item) => `
-      <article class="card reveal">
-        <div class="card-header">
-          <div>
-            <h3>${item.role}</h3>
-            <p class="card-meta">${item.company}</p>
-          </div>
-          <span class="card-date">${item.date}</span>
-        </div>
-        <p class="card-description">${item.description}</p>
-        <div class="chip-list" aria-label="Technologies and skills">${createChips(item.skills)}</div>
-      </article>
-    `
-  )
-  .join("");
-
 projectList.innerHTML = portfolioData.projects
   .map((project) => {
     const linkMarkup = project.link
@@ -189,20 +101,6 @@ projectList.innerHTML = portfolioData.projects
       </article>
     `;
   })
-  .join("");
-
-noteList.innerHTML = portfolioData.notes
-  .map(
-    (note) => `
-      <a class="note-item reveal" href="${note.href}">
-        <div>
-          <h3>${note.title}</h3>
-          <p>${note.description}</p>
-        </div>
-        <span>${note.meta}</span>
-      </a>
-    `
-  )
   .join("");
 
 contactList.innerHTML = portfolioData.contact
